@@ -1,0 +1,116 @@
+.selector {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.characterGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.characterCard {
+    padding: var(--spacing-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.characterCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--character-primary), var(--character-accent));
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+}
+
+.characterCard:hover::before {
+    transform: scaleX(1);
+}
+
+.characterCard:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.characterAvatar {
+    font-size: 5rem;
+    margin-bottom: var(--spacing-md);
+    animation: float 3s ease-in-out infinite;
+}
+
+.characterCard:hover .characterAvatar {
+    transform: scale(1.1);
+    transition: transform var(--transition-base);
+}
+
+.characterName {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--character-primary);
+}
+
+.characterDescription {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+    min-height: 3rem;
+}
+
+.characterSpecialty {
+    display: flex;
+    justify-content: center;
+}
+
+.specialtyBadge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--character-accent);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--character-primary);
+}
+
+@media (max-width: 768px) {
+    .selector {
+        padding: var(--spacing-md);
+    }
+
+    .characterGrid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}

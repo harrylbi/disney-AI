@@ -2,24 +2,7 @@
 
 A beautiful web application that lets you chat with AI personas inspired by Disney characters. Get motivation, advice, and wisdom from legendary heroes like Elsa, Mufasa, Iron Man, and Yoda.
 
-## Features
 
-- 🎭 **Character Personas**: Chat with 4 unique characters, each with distinct personalities
-  - ❄️ **Elsa**: Self-confidence & Motivation
-  - 🦁 **Mufasa**: Leadership & Wisdom
-  - 🦾 **Iron Man**: Logic & Problem Solving
-  - 🧙‍♂️ **Yoda**: Life Wisdom & Mindfulness
-
-- 💫 **Multiple Modes**:
-  - 💪 Motivation - Get inspired and boost your confidence
-  - 💭 Consultation - Receive practical advice and guidance
-  - 🎭 Roleplay - Have fun, in-character conversations
-
-- ✨ **Premium UI**:
-  - Glassmorphism effects
-  - Smooth animations
-  - Character-themed colors
-  - Fully responsive design
 
 ## Tech Stack
 
